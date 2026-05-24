@@ -1,38 +1,83 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-form {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 10px;
+}
+
+.task-form button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.filter {
+  margin: 15px 0;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-text {
+  margin: 0;
+}
+
+.task-date {
+  color: gray;
+}
+
+.done {
+  background-color: #dcdcdc;
+}
+
+.done .task-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-btn {
+  background-color: red;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
 }
